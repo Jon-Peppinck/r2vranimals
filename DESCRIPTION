@@ -1,0 +1,33 @@
+Package: r2vr
+Title: Compose and Serve WebVR Scenes
+Version: 0.0.0.9000
+Authors@R: person("Miles", "McBain", email = "miles.mcbain@gmail.com", role = c("aut", "cre"))
+Description: Building on top of Mozilla's A-Frame Framework, a suite of objects
+    are provided for composing WebVR scenes with a functional R interface. Thanks to
+    the power and versatility of A-Frame and WebVR, scenes will be viewable on
+    all major VR platforms/devices including smartphone platforms like Google
+    Cardboard.
+Depends: R (>= 3.4.0)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: testthat, knitr, rmarkdown, jsonlite, ggplot2
+RoxygenNote: 6.1.0
+Imports: stringr, purrr, magrittr, routr, fiery, readr, mime, tibble,
+        fs, uuid, methods
+VignetteBuilder: knitr
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: r2vr
+RemoteUsername: milesmcbain
+RemoteRef: master
+RemoteSha: 8f0febb34ba2afe16fd456f7cf67d667191f3990
+GithubRepo: r2vr
+GithubUsername: milesmcbain
+GithubRef: master
+GithubSHA1: 8f0febb34ba2afe16fd456f7cf67d667191f3990
+NeedsCompilation: no
+Packaged: 2019-10-19 08:56:19 UTC; n8597553
+Author: Miles McBain [aut, cre]
+Maintainer: Miles McBain <miles.mcbain@gmail.com>
+Built: R 3.6.1; ; 2019-10-19 08:56:20 UTC; windows

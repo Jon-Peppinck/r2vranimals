@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_pc_control_camera</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_pc_control_camera {r2vr}"><tr><td>a_pc_control_camera {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_pc_control_camera</h2>
+
+<h3>Description</h3>
+
+<p>Personal computer movement controls for an A-Frame scene camera
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_pc_control_camera(.js_sources = list(), easingY = 15,
+  acceleration = 100, .version_num = "4.1.2", ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>.js_sources</code></td>
+<td>
+<p>Defaults to version 4.1.2 of the controls.</p>
+</td></tr>
+<tr valign="top"><td><code>easingY</code></td>
+<td>
+<p>Easing rate of movement in the y direction (up).</p>
+</td></tr>
+<tr valign="top"><td><code>acceleration</code></td>
+<td>
+<p>Acceleration of movement in forward, backward, left, and
+right directions.</p>
+</td></tr>
+<tr valign="top"><td><code>.version_num</code></td>
+<td>
+<p>A-Frame extras version number.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>additional components to be added to this entity.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function returns an entity that will enable the scene camera perspective to be controlled using WASD keys and the mouse.
+</p>
+<p>The entity imports an external js source for controls written by Don McCurdy.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An entity object describing a camera controlled by keyboard and mouse.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

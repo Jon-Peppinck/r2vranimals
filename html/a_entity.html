@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_entity</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_entity {r2vr}"><tr><td>a_entity {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_entity</h2>
+
+<h3>Description</h3>
+
+<p>Create an A-Frame entity
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_entity(.tag = "entity", .js_sources = NULL, id = NULL,
+  .children = NULL, .assets = NULL, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>.tag</code></td>
+<td>
+<p>text for the entity tag. The default is &quot;a-entity&quot;, but it can be
+used to create any of the A-Frame built-ins for example using &quot;a-sphere&quot;</p>
+</td></tr>
+<tr valign="top"><td><code>.js_sources</code></td>
+<td>
+<p>a vector of links to Javascript files this entity depends on.
+Useful if adding a community-made component to an entity. The script file
+will be automatically be sourced in the html header by the parent scene.</p>
+</td></tr>
+<tr valign="top"><td><code>id</code></td>
+<td>
+<p>an optional id for the entity, useful if you want to later add children to it.</p>
+</td></tr>
+<tr valign="top"><td><code>.children</code></td>
+<td>
+<p>a list of A-Frame entities to be nested within the HTML tag
+of this entity.</p>
+</td></tr>
+<tr valign="top"><td><code>.assets</code></td>
+<td>
+<p>any assets needed by this entity that are not assigned in
+component configuration. For example it may be that this entity begins
+the scene with one texture and later is changed to second texture due to
+an event. It is preferable that the second texture is loaded in the asset
+block and so is cached and ready to go when the event happens.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>components to be added to the entity. See description.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function creates an A-Frame entity object to be inserted into to an
+A-Frame scene. The A-Frame scene object instructs entities to render
+themselves to html, when serving or writing itself.
+</p>
+<p>Function arguments supplied in '...' map directly to underlying entity
+components expressed in the html. There two tricks to this: 1. components
+specified in R must use an single underscore ('_') where a single dash would
+appear in an A-Frame component name between words. It is converted to '-'
+when rendered in HTML. Double underscores and leading/trailing underscores
+are not converted. 2. Components specified by name only, without any
+configuration must use the form 'component_name = NULL' or component_name =
+&quot;&quot;. For example: to create an A-Frame entity with the 'wasd-controls'
+component attached, this function would be called as
+'a_entity(wasd_controls=&quot;&quot;)'.
+</p>
+<p>Underscore conversion is provided as a convenience to save the user wrapping
+many component names in &ldquo;. It can be swtiched off by supplying a &quot;'&quot; as the
+first character of a property name, e.g.: list(''this_is_really_what_want' =
+&quot;foo&quot;). The leading &quot;'&quot; is stripped when rendering to HTML.
+</p>
+<p>Component configuration can be expressed in character form, e.g.
+'wasd_controls = &quot;fly: true; acceleration: 65&quot;' in which case it is passed
+into html directly. It can also be expressed as a list: 'wasd_controls =
+list(fly = TRUE, acceleration = 65)', in which case it is converted to the
+appropriate text.
+</p>
+<p>Child entities can be nested within the HTML tag of a parent entity by
+supplying them as a list in the 'children' argument.
+</p>
+
+
+<h3>Value</h3>
+
+<p>A_Entity object
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

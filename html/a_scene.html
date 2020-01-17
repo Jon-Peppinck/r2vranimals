@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_scene</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_scene {r2vr}"><tr><td>a_scene {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_scene</h2>
+
+<h3>Description</h3>
+
+<p>Create an A-Frame Scene
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_scene(.template = "basic_map",
+  .title = "A-Frame VR scene created with r2vr", .description = .title,
+  .aframe_version = "0.8.2", .js_sources = NULL, .children = NULL,
+  .websocket = FALSE, .websocket_host = "localhost",
+  .websocket_port = 8080, ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>.template</code></td>
+<td>
+<p>A name of a built in template or a path to a custom html template.</p>
+</td></tr>
+<tr valign="top"><td><code>.title</code></td>
+<td>
+<p>Title of the scene passed into the HTML</p>
+</td></tr>
+<tr valign="top"><td><code>.description</code></td>
+<td>
+<p>meta description of the scene passed into the HTML</p>
+</td></tr>
+<tr valign="top"><td><code>.aframe_version</code></td>
+<td>
+<p>The version of A-Frame to serve the scene with, defaults to 0.8.2</p>
+</td></tr>
+<tr valign="top"><td><code>.js_sources</code></td>
+<td>
+<p>a character vector of javascript scources to be added to
+scene html. Local sources will be served remote sources will not.</p>
+</td></tr>
+<tr valign="top"><td><code>.children</code></td>
+<td>
+<p>a list of child A-Frame entities of this scene.</p>
+</td></tr>
+<tr valign="top"><td><code>.websocket</code></td>
+<td>
+<p>TRUE if this scene should try to connect to its server with
+a websocket connection when served. This can be used to pass messages
+containing aframe events or entity updates from R to VR.</p>
+</td></tr>
+<tr valign="top"><td><code>.websocket_host</code></td>
+<td>
+<p>The host for the websocket in the client's browser to
+connect to (IP of r2vr sever).</p>
+</td></tr>
+<tr valign="top"><td><code>.websocket_port</code></td>
+<td>
+<p>The port for the
+websocket in the client's browser to connect to on the host.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>components to be added to the scene.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function creates an object that represents an A-Frame scene. A scene is
+a special type of A-Frame entity that is the root entity of the WebVR scene.
+Like regular entities it can have components added to it that change its
+behaviour.
+</p>
+<p>A scene has a html representation that is based off a template supplied in
+the 'template' argument. The template is a partially filled out A-Frame html
+that contains some Javascript js_sources, and potentially some convenient
+entities. Included templates are:
+* 'basic' Scene which is empty but for a 10m x 10m grid for ground.
+Default lights are injected by A-Frame.
+* 'basic_map' As per basic but camera position starts higher, and WASD
+movement controls are added. A bright light is situated high in the sky.
+* 'empty' an empty scene. Default lights are injected by A-Frame.
+The built-in templates are intended for debugging/construction purposes. Use
+'empty' for real scenes or build your own template.
+</p>
+<p>A scene can render itself and all its child entities and assets to a single
+html file that defines a WebVR scene that can be viewed in a browser. In
+addition to this a scene can also be called upon to serve itself so that it
+can be viewed immediately.
+</p>
+<p>Scene components are expressed as ... arguments passed to this function.
+</p>
+<p>Child entities are passed as list in the 'children' argument.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An R6 object representing an A-Frame scene.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

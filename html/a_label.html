@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_label</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_label {r2vr}"><tr><td>a_label {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_label</h2>
+
+<h3>Description</h3>
+
+<p>Create a text label, visible in VR.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_label(text, color = "#000000", font = "roboto", ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>text</code></td>
+<td>
+<p>the label text.</p>
+</td></tr>
+<tr valign="top"><td><code>color</code></td>
+<td>
+<p>the label text colour.</p>
+</td></tr>
+<tr valign="top"><td><code>font</code></td>
+<td>
+<p>the font to be used for the label text. Either the name of a
+built-in font, listed here:
+https://aframe.io/docs/0.8.0/components/text.html#stock-fonts, or a URL
+for an sdf .fnt file.</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>additional arguments to be passed to the A-Frame text entity,
+see: https://aframe.io/docs/0.8.0/primitives/a-text.html.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function returns an entity that will render a 2D text label in VR. It
+is wrapper for an A-Frame entity with the text component attached, see:
+https://aframe.io/docs/0.8.0/components/text.html. Additional component
+configuration arguments listed in the A-Frame documentation can be supplied
+in the '...' arguments.
+</p>
+<p>Use standard entity components such as 'position', 'rotation', and 'scale'
+in '...' to place the label.
+</p>
+
+
+<h3>Value</h3>
+
+<p>an A-Frame entity object.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

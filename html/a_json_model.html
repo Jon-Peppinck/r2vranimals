@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_json_model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_json_model {r2vr}"><tr><td>a_json_model {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_json_model</h2>
+
+<h3>Description</h3>
+
+<p>This function returns an entity that will render a 3D model expressed in
+threejs JSON format. See the format specification here:
+https://github.com/mrdoob/three.js/wiki/JSON-Model-format-3. The mandatory
+'src' argument should be an object returned by 'a_asset()'.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_json_model(src, .version_num = "4.1.2", mesh_smooth = FALSE,
+  .js_sources = list(), ...)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>src</code></td>
+<td>
+<p>an a_asset describing a JSON file.</p>
+</td></tr>
+<tr valign="top"><td><code>.version_num</code></td>
+<td>
+<p>A-Frame extras version number.</p>
+</td></tr>
+<tr valign="top"><td><code>mesh_smooth</code></td>
+<td>
+<p>if true, compute normals in browser to give the model a
+smoothed appearance.</p>
+</td></tr>
+<tr valign="top"><td><code>.js_sources</code></td>
+<td>
+<p>defaults to version 4.1.2 of the JSON model loader, supply
+another version using a list here. e.g. 'js_sources' =
+list(&quot;https://cdn.rawgit.com/donmccurdy/aframe-extras/&lt;path_to_js_file&gt;&quot;)</p>
+</td></tr>
+<tr valign="top"><td><code>...</code></td>
+<td>
+<p>other components to be added to the JSON model. Passed to a_entity.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>The entity imports the an extenal js source for loading JSON models written by Don McCurdy.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An entity object describing a JSON model.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

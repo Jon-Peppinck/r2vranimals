@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_asset</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_asset {r2vr}"><tr><td>a_asset {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_asset</h2>
+
+<h3>Description</h3>
+
+<p>Create an A-Frame asset
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_asset(id = "", src, .parts = NULL, .tag = "a-asset-item",
+  .inline = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>id</code></td>
+<td>
+<p>an an id to be used by the asset item in the asset block. #id will
+be used to refernce the asset in component configuratuion.</p>
+</td></tr>
+<tr valign="top"><td><code>src</code></td>
+<td>
+<p>the location of the asset</p>
+</td></tr>
+<tr valign="top"><td><code>.parts</code></td>
+<td>
+<p>the location(s) of files referred to in the 'src' file that
+need to be served with it. Examples are '.bin' files that accompany glTF
+models or texture images that accompany '.mtl' files. These are referred
+to in 'src' by relative paths, so must reside at or below the same
+directory as 'src'.</p>
+</td></tr>
+<tr valign="top"><td><code>.tag</code></td>
+<td>
+<p>the tag text to use in the asset block. Defaults to
+'a-asset-item'. Another common choices is &quot;img&quot; for images.</p>
+</td></tr>
+<tr valign="top"><td><code>.inline</code></td>
+<td>
+<p>boolean signifying if the asset is to be specified inline with the entity. If true, the containing A-Frame scene does not wait for the asset to load.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function is used to create an asset that will be loaded before an
+A-Frame scene loads in the browser. Assets are typically models, images,
+videos, and audio files. The asset object understands there may be two
+references to the asset: one in the &lt;a-assets&gt; block and the second refernce
+in a component configuratuion. It knows how to render itself for both of
+these differnt contexts. It can also be called with 'inline=TRUE' which has
+the effect of omitting it from the &lt;a-assets&gt; block and inserting a direct
+link into the component configuration.
+</p>
+<p>Assets in the &lt;a-assets&gt; block are loaded before the scene is rendered. This
+can delay the scene at a blank white page while they are fetched. Assets
+defined inline do not delay scene rendering.
+</p>
+<p>Assets can be located on local disk, or at remote URLs. The asset
+declaration will examine the 'src' parameter to see if it conforms to known
+URL conventions. If so r2vr will not attempt to serve the asset, but it will
+generate the required references to is in the output scene.
+</p>
+
+
+<h3>Value</h3>
+
+<p>an asset object.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>

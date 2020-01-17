@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: a_event</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for a_event {r2vr}"><tr><td>a_event {r2vr}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>a_event</h2>
+
+<h3>Description</h3>
+
+<p>Build an A-Frame Event Message
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+a_event(id, event_name, event_detail = "", bubbles = FALSE)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>id</code></td>
+<td>
+<p>the id of the entity that will have the event emitted on it.</p>
+</td></tr>
+<tr valign="top"><td><code>event_name</code></td>
+<td>
+<p>the name of the event.</p>
+</td></tr>
+<tr valign="top"><td><code>event_detail</code></td>
+<td>
+<p>data associated with the event.</p>
+</td></tr>
+<tr valign="top"><td><code>bubbles</code></td>
+<td>
+<p>TRUE if the event should bubble up to parents of the entity with 'id'?</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>Construct an A-Frame event to be sent to a scene in browser, using a
+websocket connection. When the event is received by a scene with an active
+websocket server, it will be routed to the entity specified by 'id'. To
+handle the event the entity needs to have components that attach appropriate
+event handlers.
+</p>
+
+
+<h3>Value</h3>
+
+<p>An object that represents an A-Frame event.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>r2vr</em> version 0.0.0.9000 <a href="00Index.html">Index</a>]</div>
+</body></html>
