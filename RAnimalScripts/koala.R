@@ -1,6 +1,6 @@
 library(r2vr)
 
-LOCAL_IP <- "192.168.0.101"
+LOCAL_IP <- "192.168.43.72"
 
 image_path_3d <- "../images/koalas/KP5.jpg"
 
