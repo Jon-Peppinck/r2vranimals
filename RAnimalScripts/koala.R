@@ -221,9 +221,9 @@ go <- function(index = NA){
              attributes = image_paths[CONTEXT_INDEX]),
     a_update(id = "yesPlane",
              component = "color",
-             attributes = "#FFFFFF"),
+             attributes = white),
     a_update(id = "noPlane",
              component = "color",
-             attributes = "#FFFFFF")
+             attributes = white)
   ))
 }
