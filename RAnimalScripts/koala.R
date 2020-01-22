@@ -1,4 +1,6 @@
 library(r2vr)
+library(httr)
+library(jsonlite)
 
 # Enter IP
 LOCAL_IP <- "192.168.43.72"
@@ -227,3 +229,10 @@ go <- function(index = NA){
              attributes = white)
   ))
 }
+
+# Get data from database with API GET request
+read <- function(){
+  # Deserialize the payload so data can be read and converted from JSON to data frame
+  koala_data.df <<- jsonlite::fromJSON(httr::content(httr::GET("https://test-api-koala.herokuapp.com/koala"), "text"), flatten = TRUE)
+}
+
