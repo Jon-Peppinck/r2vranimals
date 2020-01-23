@@ -12,7 +12,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Suggests: testthat, knitr, rmarkdown, jsonlite, ggplot2
-RoxygenNote: 6.1.0
+RoxygenNote: 6.1.1
 Imports: stringr, purrr, magrittr, routr, fiery, readr, mime, tibble,
         fs, uuid, methods
 VignetteBuilder: knitr

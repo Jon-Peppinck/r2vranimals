@@ -152,9 +152,9 @@ animals <- a_scene(.children = list(canvas_3d, koala_yes_plane_boundary, koala_n
 
 
 # Start the server
-start <- function(){
-  animals$serve(host = LOCAL_IP)
-}
+# start <- function(){
+#   animals$serve(host = LOCAL_IP)
+# }
 
 # End the server
 end <- function(){
